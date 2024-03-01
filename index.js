@@ -80,11 +80,12 @@ async function getMoviesList(page,showFavMovies =  false, pagination = true)
             if(checkMoviesInFavMoviesList)
             {
                 movieCardItem.item(4).setAttribute("src", likedHeart);
+                movieCardItem.item(4).classList.toggle("liked-heart");
             }else{
                 movieCardItem.item(4).setAttribute("src", unlikedHeart);
             }
-            movieCardItem.item(4).addEventListener("click",(e)=>{
-
+            movieCardItem.item(4).addEventListener("click",function(e){
+               
              clickHeart(e, film, movieCard);
             })
             moviesCardCnt.appendChild(movieCard);
@@ -112,11 +113,12 @@ function getMoviesListFromPage(e, showFavMovies =  false, pagination = true){
 
 function clickHeart(e,film ,movieCard)
         {
-   
+            e.target.classList.toggle("liked-heart");
            if(e.target.getAttribute("src") === unlikedHeart)
            {
             e.target.setAttribute("src" , likedHeart);
             favMoviesList.push(film);
+            
            }
            else
            {
