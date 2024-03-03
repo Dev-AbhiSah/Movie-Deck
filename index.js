@@ -308,24 +308,3 @@ for(let node of pageBlock)
     node.addEventListener("click",getMoviesListFromPage)
 }
 
-
-
-
-
-
-
-// async function check(){
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//           accept: 'application/json',
-//           Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OTMzMDQzOGY2YmI1MTNhNzczYTQwODQ3NDdlZjMxMSIsInN1YiI6IjY1ZGExZTU4YmVmZDkxMDE2NDFmNzQ0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.xxbTtP8lN34P1ogTA2qRRP0YjObmfYeFynQrU8Byllo'
-//         }
-//       };
-      
-//       let response =await fetch('https://api.themoviedb.org/3/search/movie?query=%22%20land%20of%22&include_adult=false&include_video=false&language=en-US&page=1', options);
-//       let result = await response.json();
-//       let arr = await result.results;
-//       console.log(arr);
-// }
-// check(); 
